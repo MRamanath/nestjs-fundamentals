@@ -1,25 +1,16 @@
-// TypeScript treats a class as both value and type.
-// This implicit type declared by TypeScript describes the shape of the instance a class produces.
-// Therefore when a class is used as a type, such as using let value :Class annotation,
-// TypeScript checks if the value has all the public properties of the Class.
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
+@Entity()
 export class Coffee {
+  @PrimaryGeneratedColumn()
   id: number;
+
+  @Column()
   name: string;
+
+  @Column()
   brand: string;
+
+  @Column('json', { nullable: true })
   flavors: string[];
 }
-
-// export interface Coffee {
-//   id: string;
-//   name: string;
-//   brand: string;
-//   flavors: string[];
-// }
-
-// export type Coffee = {
-//   id: string;
-//   name: string;
-//   brand: string;
-//   flavors: string[];
-// };
