@@ -9,3 +9,5 @@ nest g class coffees/dto/create-coffee.dto --no-spec
 npm i --save class-validator class-transformer
 
 npm i @nestjs/mapped-types
+
+npm i --save @nestjs/typeorm typeorm pg
