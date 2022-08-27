@@ -11,3 +11,15 @@ npm i --save class-validator class-transformer
 npm i @nestjs/mapped-types
 
 npm i --save @nestjs/typeorm typeorm pg
+
+docker-compose up
+
+npx typeorm migration:create src/migrations/CoffeeRefactor
+
+to migrate db
+________________________________________________________________
+
+npm run build
+
+npx typeorm migration:run
+
